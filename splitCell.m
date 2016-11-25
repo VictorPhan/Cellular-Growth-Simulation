@@ -1,4 +1,4 @@
-function cells = splitCell(cells, row, col, t)
+function cells = splitCell(cells, row, col, t, splitTimeBounds)
     parent_id = cells(row, col, ID);
     ancestor_id = cells(row, col, ANCESTOR);
     generation = cells(row, col, GENERATION);
@@ -6,7 +6,7 @@ function cells = splitCell(cells, row, col, t)
     % assign splitting cell with new SPLIT_TIME to next splitting
     cells = ...
         updateCell(cells, row, col, t, ...
-            parent_id, ancestor_id, generation);
+            parent_id, ancestor_id, generation, splitTimeBounds);
     
     % Choosing random direction to proliferate
     [offset_h, offset_v, row, col] = ...
@@ -16,6 +16,6 @@ function cells = splitCell(cells, row, col, t)
     cells = pushCol(cells, row+offset_v, col+offset_h);
     cells = ...
         updateCell(cells, row+offset_v, col+offset_h, ...
-            t, parent_id, ancestor_id, generation);
+            t, parent_id, ancestor_id, generation, splitTimeBounds);
     
 end
