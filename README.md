@@ -1,5 +1,5 @@
 #Cellular Growth Simulation
-![Screenshot](https://github.com/VictorPhan/Cellular-Growth-Simulation/tree/master/img/[12,16].[10,10].300.SPLIT_TIME.png)
+<img src = "img/[12,16].[10,10].300.SPLIT_TIME.png" align = "right" width = "50%" height = "50%">
 ###Overview
 
 Simulation of a cellular growth modelled as a cellular automata.
