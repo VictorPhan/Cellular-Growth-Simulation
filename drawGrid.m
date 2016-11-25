@@ -1,8 +1,8 @@
-function drawGrid(cells)
+function drawGrid(cells, gridMode)
     clf;
     cla;
     hold on;
-    imagesc(cells(:,:,GENERATION));
+    imagesc(cells(:,:,gridMode));
     colormap default;
     colorbar;
     axis equal;
