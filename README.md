@@ -1,3 +1,5 @@
+#Cellular Growth Simulation
+![Screenshot](https://github.com/VictorPhan/Cellular-Growth-Simulation/tree/master/img/[12,16].[10,10].300.SPLIT_TIME.png)
 ###Overview
 
 Simulation of a cellular growth modelled as a cellular automata.
@@ -12,6 +14,5 @@ This program was written in Matlab R2016b, but should work with all version of M
 
 ###Todo:
 * Create object for keeping track of lineage
-* Add parameter for choosing which LAYER attribute to plot in the resulting image
 * Assign better variable and function names
 * Documentation for the functions and setting parameters to run the program
