@@ -1,5 +1,5 @@
-function clearAll()
+function clearall()
     clear;
-    clear updateGrid;
-    clear splitCell;
+    clear updategrid;
+    clear splitcell;
 end
