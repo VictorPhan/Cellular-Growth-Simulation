@@ -1,4 +1,8 @@
-function [cells, id] = updateCell(cells, row, col, t, id, parent_id, ancestor_id, generation)
+function cells = updateCell(cells, row, col, t, parent_id, ancestor_id, generation)
+    persistent id;
+    if isempty(id)
+        id = numel(cells(:,:,1))+1;
+    end
     cells(row, col, SPLIT_TIME) = createSplitTimer(1);
     cells(row, col, BIRTH_TIME) = t;
     cells(row, col, ID)         = id;

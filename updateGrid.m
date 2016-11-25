@@ -1,4 +1,4 @@
-function cells = updateGrid(cells, dimen)
+function cells = updateGrid(cells)
     % updates the grid
     % find the minimum of all split_times and its index
     A = cells(:,:,SPLIT_TIME);
@@ -18,6 +18,6 @@ function cells = updateGrid(cells, dimen)
         t = t + M;
     end
     % split the cell
-    cells = splitCell(cells, I_row, I_col, t, dimen);
+    cells = splitCell(cells, I_row, I_col, t);
     
 end

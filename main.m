@@ -1,32 +1,18 @@
-% Runs the cell proliferation simulation
-clear;
-clear updateGrid;
-clear splitCell;
-dimen     = [40, 40];
+clearAll();
+
+dimen     = [40, 10];
 numSplit  = 500;
 
 % initiate the cell array
-cells(:, :, SPLIT_TIME) = createSplitTimer(dimen);
-cells(:, :, BIRTH_TIME) = zeros(dimen);
-cells(:, :, ID)         = vec2mat(1:prod(dimen), dimen(2));
-cells(:, :, PARENT)     = zeros(dimen);
-cells(:, :, ANCESTOR)   = vec2mat(1:prod(dimen), dimen(2));
-cells(:, :, GENERATION) = ones(dimen);
+cells = initiateCells(dimen);
+
+% keeping track of lineage
 
 % draw the grid
-clf;
-cla;
-hold on;
-imagesc(cells(:,:,GENERATION));
-colormap default;
-colorbar;
-axis equal;
-pause(0.5);
+drawGrid(cells)
 
 % run the simulation
 for step = 1:numSplit
-    cells = updateGrid(cells, dimen);
-    imagesc(cells(:,:,GENERATION),[1,4]);
-    title(num2str(step));
-    drawnow;
+    cells = updateGrid(cells);
+    updateImage(cells, step);
 end
