@@ -1,7 +1,7 @@
 clearAll();
 
 % set the parameters
-splitTimeBounds = [0, 16];
+splitTimeBounds = [12, 16];
 dimen           = [40, 10];
 numSplit        = 500;
 gridMode        = GENERATION;
