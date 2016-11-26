@@ -15,4 +15,4 @@ This program was written in Matlab R2016b, but should work with all version of M
 ###Todo:
 * Create object for keeping track of lineage
 * Assign better variable and function names
-* Documentation for the functions and setting parameters to run the program
+* Organise functions into folders
