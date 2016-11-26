@@ -4,5 +4,7 @@ function setupimage(cells, gridMode)
     cla;
     hold off;
     axis equal;
+    set(gca,'visible','off');
+    set(gca,'XtickLabel',[],'YtickLabel',[]);
     imagesc(cells(:, :, gridMode));
 end

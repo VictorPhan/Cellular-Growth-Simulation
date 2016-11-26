@@ -7,10 +7,10 @@
 
 clearall();
 
-splitTimeBounds = [0, 16];
+splitTimeBounds = [12, 16];
 dimen           = [40, 40];
-numSplit        = 500;
-gridMode        = BIRTH_TIME;
+numSplit        = 10000;
+gridMode        = ANCESTOR;
 
 cells = initiatecells(dimen, splitTimeBounds);
 
@@ -20,7 +20,8 @@ setupimage(cells, gridMode);
 
 for step = 0:numSplit
     cells = updategrid(cells, splitTimeBounds);
-    updateimage(cells, step, gridMode);
+    
 end
+updateimage(cells, step, gridMode);
 colorbar;
 drawnow;
