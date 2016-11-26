@@ -3,5 +3,6 @@
 function updateimage(cells, step, gridMode)
     imagesc(cells(:,:,gridMode));
     title(num2str(step));
+    axis equal;
     drawnow;
 end

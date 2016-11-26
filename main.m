@@ -7,18 +7,20 @@
 
 clearall();
 
-splitTimeBounds = [12, 16];
-dimen           = [10, 10];
-numSplit        = 300;
-gridMode        = SPLIT_TIME;
+splitTimeBounds = [0, 16];
+dimen           = [40, 40];
+numSplit        = 500;
+gridMode        = BIRTH_TIME;
 
 cells = initiatecells(dimen, splitTimeBounds);
 
 % TODO: keeping track of lineage
 
-drawgrid(cells, gridMode);
+setupimage(cells, gridMode);
 
-for step = 1:numSplit
+for step = 0:numSplit
     cells = updategrid(cells, splitTimeBounds);
     updateimage(cells, step, gridMode);
 end
+colorbar;
+drawnow;
