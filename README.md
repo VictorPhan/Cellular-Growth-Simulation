@@ -2,7 +2,7 @@
 <img src = "img/[12,16].[10,10].300.SPLIT_TIME.png" align = "right" width = "50%" height = "50%">
 ###Overview
 
-Simulation of a cellular growth modelled as a cellular automata.
+The program aims to model stem cell proliferation in a finite spaced cellular automata and observe its interactions with neighbouring cells. Attributes such as the generation, parents, ancestors, time of birth and time of split of a cell are tracked in in a multidimensional array data structure.
 
 ###Files
 * main.m runs the program
